@@ -11,6 +11,7 @@ script:
   - node dist/node/loader.entry.js
 after_success:
   - npm run report-coverage
+  - babel-node build/changelog.js
 branches:
   only:
     - master
