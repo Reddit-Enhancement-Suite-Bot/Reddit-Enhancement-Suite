@@ -9,7 +9,9 @@
   "homepage": "http://redditenhancementsuite.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/honestbleeps/Reddit-Enhancement-Suite.git"
+    "url": "https://github.com/honestbleeps/Reddit-Enhancement-Suite.git",
+    "username": "honestbleeps",
+    "repository": "Reddit-Enhancement-Suite"
   },
   "scripts": {
     "preinstall": "npm -v && node -v && python --version && git rev-parse HEAD && git status --porcelain",
@@ -27,7 +29,8 @@
     "lint-fix": "eslint . --fix",
     "test": "cross-env NODE_ENV=test ava",
     "coverage": "cross-env NODE_ENV=test nyc ava",
-    "report-coverage": "nyc report --reporter=text-lcov | coveralls"
+    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "changelog-merge": "babel-node build/changelog.js"
   },
   "ava": {
     "files": [
@@ -64,6 +67,7 @@
   "devDependencies": {
     "autoprefixer": "6.4.0",
     "ava": "0.15.2",
+    "babel-cli": "6.11.4",
     "babel-core": "6.13.0",
     "babel-eslint": "6.1.2",
     "babel-loader": "6.2.4",
